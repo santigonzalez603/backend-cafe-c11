@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { test } from "../controllers/productos.controllers";
 
 const router = Router();
-router.use('/test', (req, res, next)=>{
-    res.status(200);
-    res.send('primera prueba desde el backend')
-})
+//get, past, put, delete
+router.route('/test').get(test)
 
 export default router;
